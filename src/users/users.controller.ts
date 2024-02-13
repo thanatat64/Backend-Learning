@@ -36,10 +36,7 @@ export class UsersController {
         return {id, ...userUpdate}
     }
 
-    @Delete(':id') // DELETE : /users/ :id
-    delete(@Param('id') id:String){
-        return {id}
-    }
+    
 
 
 }
