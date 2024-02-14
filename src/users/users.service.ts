@@ -53,6 +53,13 @@ export class UsersService {
     return user
   }
 
+  findInterns(role?:'INTERN'){
+    if(role){
+      return this.userData.filter(user => user.role === role)
+    }
+    return this.userData
+  }
+
   create(user: { name: string, email: string, tel: string, role: 'ENGINEER' | 'INTERN' | 'ADMIN' }) {
     const userByHighestId = [...this.userData].sort((a, b) => b.id - a.id)
     const newUser = {
