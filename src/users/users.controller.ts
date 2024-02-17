@@ -18,10 +18,10 @@ export class UsersController {
         return this.userService.findAll(role)
     }
 
-    @Get() //GET /users/interns
-    findInterns(@Query('role') role?: 'INTERN'){
-        return this.userService.findInterns(role)
-    }
+    // @Get(':role') //GET /users/interns
+    // findInterns(@Query('role') role?: 'INTERN'){
+    //     return this.userService.findInterns(role)
+    // }
 
     @Get(':id') // GET : /users/ :id
     findOne(@Param('id') id: String) {
